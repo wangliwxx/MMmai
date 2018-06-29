@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-首页wl</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+ <div class="container">
+    <!-- 头部 -->
+  <header id="m_header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索框 -->
+    <section id="m_form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </form>
+    </section>
+    <!-- 导航区 -->
+    <section id="m_nav">
+      <ul class="clearfix">
+        <!-- keng 1-->
+      </ul>
+    </section>
+    <!-- 超值折扣推荐区 和产品展示列表-->
+    <section class="mproduct">
+      <!-- 超值折扣推荐标题栏 -->
+      <header class="mpro_tit clearfix">
+        <a href="javascript:;">
+          <span class="fl">超值折扣推荐</span>
+          <img class="fr" src="images/more.png" alt="">
+        </a>
+      </header>
+      <!-- 产品展示列表 -->
+      <div class="mpro_list">
+        <ul>
+         <!-- keng2 -->
+        </ul>
+      </div>
+  
+    </section>
+    <!-- 更多优惠信息mmore -->
+    <section class="m_more">
+      <a href="#">更多优惠信息>></a>
+    </section>
+    <!-- 品牌排行 -->
+    <section class="pinpai">
+      <!-- 品牌排行标题栏 -->
+      <header class="mpp_tit clearfix">
+        <a href="javascript:;">
+          <span class="fl">品牌排行</span>
+          <img class="fr" src="images/more.png" alt="">
+        </a>
+      </header>
+  
+    </section>
+    <!-- 底部 -->
+    <footer class="mfooter">
+      <!-- 底部导航 -->
+      <div class="mft_bts clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;">
+          <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+        </a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="mft_msg">
+        <p>
+          <a href="javascript:;" style="color:red">手机APP下载</a>
+          <a href="javascript:;" style="color:black">慢慢买手机版</a>
+          <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+ </div>
+
+
+  <!-- 导航模板 -->
+  <script type="text/html" id="tpl1">
+   {{each result v i}}
+    <li class="menu-item">
+      <a href="{{v.titlehref}}">
+         {{@ v.img}}
+        <p>{{v.name}}</p>
+      </a>
+    </li>
+   {{/each}}
+ </script>
+  <!-- 模板-超值折扣产品展示列表 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li>
+      <!--点击跳到对应的页面 -->
+        <a href="moneyproduct.html?productid={{v.productId}}">
+          <div class="mitem_left fl">
+            <!-- v.productImg2 -->
+            <img src="images/product.jpg" alt="">
+          </div>
+          <div class="mitem_right">
+            <p class="tit txt-cut">
+              {{v.productName}}
+              <span class="price">{{v.productPinkage}}</span>
+            </p>
+            <p class="other clearfix">
+              <span class="fl"> {{v.productFrom}} |  {{v.productTime}}</span>
+              <span class="fr tips">
+                <!-- ?????????????? -->
+                <i class="icon-comment fa fa-commenting"></i>
+                {{v.productComCount}}
+              </span>
+            </p>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+  </script>
+
+
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

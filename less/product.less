@@ -1,0 +1,138 @@
+// 中间主体区域
+@base:75;
+//1.面包屑
+// 面包屑 -标题3级导航菜单
+.product_list_title{
+  height: 80rem/@base;
+  line-height: 80rem/@base;
+  width: 100%;
+  padding-left:20rem/@base;
+  background-color: #5a5a5a;
+  border:1px solid #ddd;
+  ul{
+   height: 80rem/@base;
+   width: 100%;
+   overflow: hidden;
+  }
+   li{
+     float: left;
+     max-width: 40%;
+     a{
+       display: block;
+       padding-right:5rem/@base;
+       color:#fff;
+       font-size: 28rem/@base;
+     }
+   }
+ }
+//  产品详情-图片+文字
+.product_detail{
+  background-color: #fff;
+  width: 100%;
+  padding:15rem/@base;
+  .d_tit{
+    font-size: 30rem/@base;
+    line-height: 40rem/@base;
+    color:#575757;
+  }
+  img{
+    display: block;
+    margin:0 auto;
+    width:260rem/@base;
+    height:260rem/@base;
+  }
+}
+// mtab栏-比价购买
+.mtab{
+  // padding:15rem/@base 0;
+  ul{
+    border-top:1px solid #c14d00;
+    border-bottom:1px solid #c14d00;
+  }
+  li{
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    background-color: #ffbb02;
+    border-left:1px solid #c14d00;
+    &:first-child{
+      border-left:none;
+    }
+    a{
+      display: block;
+      width: 100%;
+      font-size: 30rem/@base;
+      color:#fff;
+      height: 80rem/@base;
+      line-height: 80rem/@base;
+    }
+  }
+}
+//比价购买
+.bjshop{
+  padding:15rem/@base;
+ li{
+   float: left;
+   width: 33.33%;
+   text-align: center;
+   height: 60rem/@base;
+   line-height: 60rem/@base;
+   font-size: 24rem/@base;
+   color:#575757;
+   .go_shop{
+     padding:10rem/@base 12rem/@base;
+     background-color: #ff5500;
+     color:#fff;
+     border-radius: 10rem/@base;
+   }
+ }
+}
+// 网友评价
+.m-comment{
+  background-color: #fff;
+  width: 100%;
+  .mpj_titl{
+    border-top:.106668rem solid #7a7a7a;
+   
+    text-align: center;
+    h3{
+      height: 100%;
+      width: 100%;
+      background-color: #dbdbdb;
+      border-top:1px solid #fff;
+       padding:10rem/@base;
+       font-size: 30rem/@base;
+       font-weight: 400;
+       color:#000;
+    }
+  
+  }
+  .mpj_body{
+    width: 100%;
+    .mpj_list{
+      padding:20rem/@base;
+    }
+    .list_item{
+      padding:50rem/@base 10rem/@base;
+      border-bottom:1px solid #ddd;
+      .tit{
+        padding:10rem/@base 0;
+        span{
+          width: 50%;
+          font-size: 25rem/@base;
+          color:#999;
+          &.fr{
+            text-align: right;
+          }
+        }
+      }
+      .info{
+        font-size: 25rem/@base;
+        font-weight: 400;
+        line-height: 42rem/@base;
+        
+      }
+    }
+    
+  }
+}

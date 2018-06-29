@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-商品详情页wl</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="m_header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索框 -->
+    <section id="m_form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </form>
+    </section>
+    <!-- 中间主体区域-产品详情 -->
+    <section class="pro-body">
+      <!-- 面包屑-标题3级导航菜单 -->
+      <nav class="product_list_title">
+        <ul class="clearfix">
+          <!-- keng1 -->
+        </ul>
+      </nav>
+      <!-- 产品详情 -->
+      <div class="product_detail">
+        <!-- keng2 -->
+      </div>
+      <!-- mtab栏-比价购买 -->
+      <section class="mtab">
+        <ul class="clearfix">
+          <li>
+            <a href="javascript:;">比价购买</a>
+          </li>
+          <li>
+            <a href="javascript:;">产品产数</a>
+          </li>
+          <li>
+            <a href="javascript:;">优选评价</a>
+          </li>
+        </ul>
+      </section>
+      <!-- 比价购买 -->
+      <section class="bjshop">
+        <ul class="clearfix">
+          <li>
+            <i class="m_logo">
+              <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+            </i>
+            <a href="javascript:;">京东商城</a>
+          </li>
+          <li class="bj_price">
+            &yen;999.9
+          </li>
+          <li>
+            <span class="go_shop">去购买</span>
+          </li>
+        </ul>
+      </section>
+      <!-- 网友评价 -->
+      <section class="m-comment">
+        <header class="mpj_titl">
+          <h3>网友评价</h3>
+        </header>
+        <div class="mpj_body">
+          <ul class="mpj_list">
+            <!-- 评论1 -->
+            <!-- keng3 -->
+          </ul>
+        </div>
+
+
+
+      </section>
+
+
+    </section>
+
+    <!-- 更多优惠信息mmore -->
+    <section class="m_more">
+      <a href="#">查看更多评价>></a>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="mfooter">
+      <!-- 底部导航 -->
+      <div class="mft_bts clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;">
+          <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+        </a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="mft_msg">
+        <p>
+          <a href="javascript:;" style="color:red">手机APP下载</a>
+          <a href="javascript:;" style="color:black">慢慢买手机版</a>
+          <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 模板-面包屑 -->
+  <script type="text/html" id="tpl1">
+    <li>
+        <a href="index.html">首页 ></a>
+      </li>
+      <li>
+        <a href="category.html">全部分类 ></a>
+      </li>
+      {{each result v i}}
+      <li>
+        <a href="javascript:;">{{v.category}} ></a>
+      </li>
+      {{/each}}
+   </script>
+  <!-- 模板-产品详情 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}}
+   <div class="d_pic">
+     <!-- ????????/图片没换，因为数据库图片炸了 -->
+          <img src="http://img2013.zuyushop.com/ProPic/20136/Thumb/Thumb_2013060013531667572.jpg" alt="">
+        </div>
+        <p class="d_tit txt-cut">{{v.productName}}</p>
+        {{/each}}
+   </script>
+  <!-- 模板-网友评论 -->
+  <script type="text/html" id="tpl3">
+    {{each result v i}}
+    <li class="list_item">
+        <!-- 评论头 -->
+        <div class="tit clearfix">
+          <span class="fl">{{v.comName}}</span>
+          <span class="fr">{{v.comTime}}</span>
+          <span class="fr">{{v.comFrom}}</span>
+        </div>
+        <!-- 评论内容info -->
+        <div class="info">
+          {{v.comContent}}
+        </div>
+      </li>
+     
+    {{/each}}
+   </script>
+
+
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/product.js"></script>
+</body>
+
+</html>

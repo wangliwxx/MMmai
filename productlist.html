@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-商品列表wl</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/productlist.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="m_header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索框 -->
+    <section id="m_form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </form>
+    </section>
+    <!-- 产品详情 -->
+    <section class="pro-body">
+      <!-- 面包屑-标题3级导航菜单 -->
+      <nav class="product_list_title">
+        <ul class="clearfix">
+          <!-- keng1 -->
+        </ul>
+      </nav>
+      <!-- 产品详情 -->
+      <div class="product_list_content">
+        <ul>
+          <!-- keng2 -->
+        </ul>
+      </div>
+    </section>
+    <!-- 上一页-下一页 -->
+    <section class="m_fenye clearfix">
+      <div class="m_prev">
+        <a href="javascript:;">上一页</a>
+      </div>
+      <div>
+        <select name="mfenye_select" id="mfenye_select">
+         <!-- keng -->
+        </select>
+      </div>
+      <div class="m_next">
+        <a href="javascript:;">下一页</a>
+      </div>
+    </section>
+    <!-- 底部 -->
+    <footer class="mfooter">
+      <!-- 底部导航 -->
+      <div class="mft_bts clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;">
+          <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+        </a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="mft_msg">
+        <p>
+          <a href="javascript:;" style="color:red">手机APP下载</a>
+          <a href="javascript:;" style="color:black">慢慢买手机版</a>
+          <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 面包屑-导航模板 -->
+  <script type="text/html" id="tpl1">
+    <li>
+        <a href="index.html">首页 ></a>
+      </li>
+      <li>
+        <a href="category.html">全部分类 ></a>
+      </li>
+    {{each result v i}}
+    <li>
+        <a href="javascript:;">{{v.category}} ></a>
+      </li>
+    {{/each}}  
+ </script>
+  <!-- 模板-产品展示列表 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li data-productId="{{v.productId}}" data-productListId="{{v.productlistId}}">
+        <!-- ?????????????????? -->
+        <a href="product.html?productId={{v.productId}}&categoryId={{v.categoryId}}">
+          <div class="mitem_left fl">
+            <!-- v.productImg2 -->
+            <img src="images/product.jpg" alt="">
+          </div>
+          <div class="mitem_right">
+            <p class="tit txt-cut">
+             {{v.productName}}
+            </p>
+            <p class="price">{{v.productPrice}}</p>
+            <p class="other clearfix">
+              <span class="fl"> {{v.productQuote}}</span>
+              <span class="fr tips">
+                <!-- ?????????????? -->
+                <i class="icon-comment fa fa-commenting"></i>
+                {{v.productCom}}
+              </span>
+            </p>
+          </div>
+        </a>
+      </li>
+      {{/each}}
+  </script>
+  <!-- 上一页-下一页渲染 -->
+  <!-- <script type="text/html" id="tpl3">
+    
+    <option value="1">1 / 3 </option>
+     <option value="1">1 / <% Math.ceil(totalCount/pagesize) %> </option> 
+  
+  </script> -->
+
+
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/productlist.js"></script>
+</body>
+
+</html>

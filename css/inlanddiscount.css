@@ -1,0 +1,51 @@
+#m_header {
+  text-align: center;
+  color: #fff;
+}
+#m_header .logo {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.34666667rem;
+  width: 12%;
+}
+#m_header .logo img {
+  display: block;
+  width: 100%;
+  margin-top: 0.08rem;
+}
+#m_header .mh_tit {
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  font-size: 0.46666667rem;
+}
+.inland_discount ul li {
+  padding: 0.26666667rem;
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  height: 7.33333333rem;
+}
+.inland_discount ul li .dc_pic {
+  padding: 0.26666667rem;
+}
+.inland_discount ul li .dc_pic img {
+  display: block;
+  width: 100%;
+  height: 4rem;
+}
+.inland_discount ul li .title {
+  font-size: 0.4rem;
+  text-align: left;
+}
+.inland_discount ul li .sub_price {
+  font-size: 0.32rem;
+  color: red;
+  padding: 0.2rem 0.06666667rem;
+}
+.inland_discount ul li .mall {
+  color: #a1a1a1;
+  font-size: 0.26666667rem;
+}

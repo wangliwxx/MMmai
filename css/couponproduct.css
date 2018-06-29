@@ -1,0 +1,23 @@
+#m_header {
+  text-align: center;
+  background-color: #f4483e;
+  color: #fff;
+}
+#m_header .logo {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.34666667rem;
+  width: 12%;
+}
+#m_header .logo img {
+  display: block;
+  width: 100%;
+  margin-top: 0.08rem;
+}
+#m_header .mh_tit {
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  font-size: 0.46666667rem;
+}

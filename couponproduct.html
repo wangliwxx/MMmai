@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-优惠券详情wl</title>
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="m_header">
+      <div class="logo">
+        <a href="moneyctrl.html" title="慢慢买">
+          <img src="images/icback.svg" alt="">
+        </a>
+      </div>
+      <div class="mh_tit">优惠券详情</div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 中间内容区 -->
+   <!-- ???????????????????? -->
+    <!-- 底部 -->
+    <footer class="mfooter">
+      <!-- 底部导航 -->
+      <div class="mft_bts clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;">
+          <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+        </a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="mft_msg">
+        <p>
+          <a href="javascript:;" style="color:red">手机APP下载</a>
+          <a href="javascript:;" style="color:black">慢慢买手机版</a>
+          <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 模板-内容信息的头部 -->
+  <script type="text/html" id="tpl">
+    {{each result v i}}
+    <li>
+        <a href="couponproduct.html?couponid={{v.couponId}}">
+          <!-- src v.couponImg -->
+          <img src="images/categorylist.jpg" alt=""> {{v.couponTitle}}
+        </a>
+      </li>
+      {{/each}}
+  </script>
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/couponproduct.js"></script>
+</body>
+
+</html>

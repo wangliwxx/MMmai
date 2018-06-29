@@ -1,0 +1,65 @@
+@base:75;
+// 头部区域
+#m_header{
+ text-align: center;
+ color:#fff;
+  .logo{
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:26rem/@base;
+    width:12%;
+
+    img{
+      display: block;
+      width: 100%;
+      margin-top: 6rem/@base;
+    }
+  }
+  .mh_tit{
+    height: 100rem/@base;
+    line-height: 100rem/@base;
+    font-size: 35rem/@base;
+  }  
+}
+// 中间内容区域
+.inland_discount{
+  ul{
+    li{
+      padding:20rem/@base;
+      float: left;
+      width: 50%;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee;
+      height: 550rem/@base;
+      // 图片
+      .dc_pic{
+        // width:300rem/@base;
+        // height:300rem/@base;
+        padding:20rem/@base;
+        img{
+          display: block;
+          width: 100%;
+          height:300rem/@base;
+        }
+      }
+      // 产品描述
+      .title{
+        font-size: 30rem/@base;
+       text-align: left;
+      }
+      // 价格折扣
+      .sub_price{
+        font-size: 24rem/@base;
+        color:red;
+        padding:15rem/@base 5rem/@base;
+
+      }
+      .mall{
+        color:#a1a1a1;
+        font-size: 20rem/@base;
+      }
+    }
+  }
+}

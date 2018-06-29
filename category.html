@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-分类页wl</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/category.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="m_header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索框 -->
+    <section id="m_form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </form>
+    </section>
+    <!-- 商品列表 -->
+    <div class="mcategory mbrief">
+      <ul class="mbrief-list clearfix">
+       <!-- keng1 -->
+      </ul>
+    </div>
+    <!-- 底部 -->
+    <footer class="mfooter">
+      <!-- 底部导航 -->
+      <div class="mft_bts clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;">
+          <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+        </a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="mft_msg">
+        <p>
+          <a href="javascript:;" style="color:red">手机APP下载</a>
+          <a href="javascript:;" style="color:black">慢慢买手机版</a>
+          <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 导航模板 -->
+  <script type="text/html" id="tpl1">
+    <!-- 1. -->
+    {{each result v i}}
+    <li class="mbrief-list-item">
+        <!-- 标题 -->
+        <div class="tit clearfix" data-id="{{v.titleId}}">
+          <a href="javascript:;" class="fl">{{v.title}}</a>
+          <i class="fr fa fa-angle-down"></i>
+        </div>
+        <!-- 信息 -->
+        <div class="info hidden">
+          <ul class="clearfix ul_info">
+           <!-- keng2 -->
+           
+          </ul>
+        </div>
+      </li>
+      {{/each}}
+ </script>
+ <script type="text/html" id="tpl2">
+  {{each result v i}}
+  <li>
+      <a href="productlist.html?categoryid={{v.categoryId}}" title="{{v.title}}">{{v.category}}</a>
+    </li>
+    {{/each}}
+ </script>
+
+
+
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/category.js"></script>
+</body>
+
+</html>

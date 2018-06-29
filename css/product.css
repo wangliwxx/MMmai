@@ -1,0 +1,123 @@
+.product_list_title {
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+  width: 100%;
+  padding-left: 0.26666667rem;
+  background-color: #5a5a5a;
+  border: 1px solid #ddd;
+}
+.product_list_title ul {
+  height: 1.06666667rem;
+  width: 100%;
+  overflow: hidden;
+}
+.product_list_title li {
+  float: left;
+  max-width: 40%;
+}
+.product_list_title li a {
+  display: block;
+  padding-right: 0.06666667rem;
+  color: #fff;
+  font-size: 0.37333333rem;
+}
+.product_detail {
+  background-color: #fff;
+  width: 100%;
+  padding: 0.2rem;
+}
+.product_detail .d_tit {
+  font-size: 0.4rem;
+  line-height: 0.53333333rem;
+  color: #575757;
+}
+.product_detail img {
+  display: block;
+  margin: 0 auto;
+  width: 3.46666667rem;
+  height: 3.46666667rem;
+}
+.mtab ul {
+  border-top: 1px solid #c14d00;
+  border-bottom: 1px solid #c14d00;
+}
+.mtab li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  background-color: #ffbb02;
+  border-left: 1px solid #c14d00;
+}
+.mtab li:first-child {
+  border-left: none;
+}
+.mtab li a {
+  display: block;
+  width: 100%;
+  font-size: 0.4rem;
+  color: #fff;
+  height: 1.06666667rem;
+  line-height: 1.06666667rem;
+}
+.bjshop {
+  padding: 0.2rem;
+}
+.bjshop li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  font-size: 0.32rem;
+  color: #575757;
+}
+.bjshop li .go_shop {
+  padding: 0.13333333rem 0.16rem;
+  background-color: #ff5500;
+  color: #fff;
+  border-radius: 0.13333333rem;
+}
+.m-comment {
+  background-color: #fff;
+  width: 100%;
+}
+.m-comment .mpj_titl {
+  border-top: .106668rem solid #7a7a7a;
+  text-align: center;
+}
+.m-comment .mpj_titl h3 {
+  height: 100%;
+  width: 100%;
+  background-color: #dbdbdb;
+  border-top: 1px solid #fff;
+  padding: 0.13333333rem;
+  font-size: 0.4rem;
+  font-weight: 400;
+  color: #000;
+}
+.m-comment .mpj_body {
+  width: 100%;
+}
+.m-comment .mpj_body .mpj_list {
+  padding: 0.26666667rem;
+}
+.m-comment .mpj_body .list_item {
+  padding: 0.66666667rem 0.13333333rem;
+  border-bottom: 1px solid #ddd;
+}
+.m-comment .mpj_body .list_item .tit {
+  padding: 0.13333333rem 0;
+}
+.m-comment .mpj_body .list_item .tit span {
+  width: 50%;
+  font-size: 0.33333333rem;
+  color: #999;
+}
+.m-comment .mpj_body .list_item .tit span.fr {
+  text-align: right;
+}
+.m-comment .mpj_body .list_item .info {
+  font-size: 0.33333333rem;
+  font-weight: 400;
+  line-height: 0.56rem;
+}

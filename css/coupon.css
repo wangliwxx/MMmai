@@ -1,0 +1,47 @@
+#m_header {
+  text-align: center;
+  background-color: #f4483e;
+  color: #fff;
+}
+#m_header .logo {
+  float: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.34666667rem;
+  width: 12%;
+}
+#m_header .logo img {
+  display: block;
+  width: 100%;
+  margin-top: 0.08rem;
+}
+#m_header .mh_tit {
+  height: 1.33333333rem;
+  line-height: 1.33333333rem;
+  font-size: 0.46666667rem;
+}
+.coupon {
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+.coupon li {
+  width: 3.06666667rem;
+  height: 2rem;
+  float: left;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-top: 0.13333333rem;
+  margin-left: 0.13333333rem;
+}
+.coupon li a {
+  font-size: 0.26666667rem;
+}
+.coupon li a img {
+  box-sizing: border-box;
+  display: block;
+  width: 1.33333333rem;
+  height: 1.33333333rem;
+  margin: 0 auto;
+  margin-top: 0.06666667rem;
+}

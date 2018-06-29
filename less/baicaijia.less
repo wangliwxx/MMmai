@@ -1,0 +1,51 @@
+@base:75;
+// 头部区域
+#m_header{
+ text-align: center;
+ background-color: #f4483e;
+ color:#fff;
+  .logo{
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:26rem/@base;
+    width:12%;
+
+    img{
+      display: block;
+      width: 100%;
+      margin-top: 6rem/@base;
+    }
+  }
+  .mh_tit{
+    height: 100rem/@base;
+    line-height: 100rem/@base;
+    font-size: 35rem/@base;
+  }  
+}
+// 中间内容区- 区域滑动
+.coupon{
+position: relative;
+height: 1000px;
+
+}
+.bcj_head{
+  height:80rem/@base;
+  // overflow: hidden;
+  overflow: scroll;
+
+  li{
+     float: left;
+     padding:10rem/@base;
+     height:80rem/@base;
+    //  line-height: 80rem/@base;
+     text-align: center;
+     font-size: 20rem/@base;
+    a{
+      display: block;
+      width:100%;
+     
+    }
+  }
+}

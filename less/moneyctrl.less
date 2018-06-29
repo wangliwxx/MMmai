@@ -1,0 +1,77 @@
+@base:75;
+// 头部区域
+#m_header{
+ text-align: center;
+ color:#fff;
+  .logo{
+    padding:26rem/@base;
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // padding:24rem/@base;
+    width:12%;
+    a{
+      display: block;
+      width: 100%;
+    }
+    img{
+      display: block;
+      width: 100%;
+      margin-top:6rem/@base;
+    }
+  }
+  .mh_tit{
+    height: 100rem/@base;
+    line-height: 100rem/@base;
+    font-size: 35rem/@base;
+  }
+}
+//2. 产品展示列表
+.mpro_list{
+
+  li{
+    height: 250rem/@base;
+    border-bottom: 1px solid #e6e6e6;
+    // 左边图片
+    .mitem_left{
+      width: 210rem/@base;
+      height: 250rem/@base;
+      padding:45rem/@base 25rem/@base;
+      img{
+        display: block;
+        width: 160rem/@base;
+        height: 160rem/@base;
+      }
+    }
+
+    // 右边描述
+    .mitem_right{
+      overflow: hidden;
+      height: 250rem/@base;
+      font-size: 25rem/@base;
+      padding:45rem/@base 25rem/@base;
+      position: relative;
+
+      .tit{
+        position: absolute;
+        top: 45rem/@base;
+        left: 0;
+        .price{
+          color:red;
+        }
+      }
+      .other{
+        position: absolute;
+        bottom: 45rem/@base;
+        left: 0;
+        width:100%;
+        color:#a1a1a1;
+        font-size: 26rem/@base;
+        .tips{
+          margin-right:25rem/@base;
+        }
+      }
+    }
+  }
+}

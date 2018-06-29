@@ -1,0 +1,249 @@
+
+@base:75;
+// 基准值：75px
+
+// 头部
+#m_header{
+  height: 100rem/@base;
+  position: relative;
+  background-color: #ff841d;
+  .logo{
+    padding:25rem/@base;
+    float: left;
+    width: 75%;
+    margin-left:10rem/@base;
+    img{
+      max-height: 50rem/@base;
+      overflow: hidden;
+    }
+  }
+  // 右边
+  .appdown{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding:15rem/@base;
+    img{
+      max-height: 70rem/@base;
+    }
+  }
+}
+// 搜索部分
+#m_form_search{
+ height: 100rem/@base;
+border-bottom: 1px solid #e6e6e6;
+ .search{
+   height: 100rem/@base;
+   padding:20rem/@base;
+  position: relative;
+  // 输入框
+    [type="search"]{
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      padding-left:40rem/@base;
+      width: 100%;
+      background-color: #f1f1f1;
+      border-radius: 60rem/@base;
+      border:1px solid #f1f1f1;
+      font-size: 22rem/@base;
+      // position: absolute;
+      // top:20rem/@base;
+      // left:20rem/@base;
+    }
+    // 搜索按钮框
+    [type="button"]{
+      width: 130rem/@base;
+      position: absolute;
+      top:20rem/@base;
+      right:20rem/@base;
+      height: 60rem/@base;
+      line-height: 60rem/@base;
+      border-radius: 60rem/@base;
+      border:1px solid #ff841d;
+      background-color: #ff841d;
+      color:#fff;
+      font-size: 22rem/@base;
+    }
+ }
+}
+// 导航区
+#m_nav{
+  margin-top:20rem/@base;
+  li{
+    float: left;
+    width:25%;
+    text-align: center;
+  }
+  a{
+    display: block;
+    padding:10rem/@base 0;
+    &.hide{
+      display: none;
+    }
+    img{
+      width: 110rem/@base;
+      height: 110rem/@base;
+    }
+    p{
+      font-size: 20rem/@base;
+      padding:10rem/@base 0;
+    }
+  }
+}
+
+// 超值折扣推荐区 和产品展示列表
+
+// 1.超值折扣推荐标题栏
+.mpro_tit{
+  height: 70rem/@base;
+  background-color: #ff9000;
+  padding:0 20rem/@base;
+  font-size: 30rem/@base;
+  line-height: 70rem/@base;
+  a{
+    
+    color:#fff;
+  }
+  img{
+    display: block;
+    width: 40rem/@base;
+    height: 40rem/@base;
+    margin-top:15rem/@base;
+  }
+}
+//2. 产品展示列表
+.mpro_list{
+
+  li{
+    height: 250rem/@base;
+    border-bottom: 1px solid #e6e6e6;
+    // 左边图片
+    .mitem_left{
+      width: 210rem/@base;
+      height: 250rem/@base;
+      padding:45rem/@base 25rem/@base;
+      img{
+        display: block;
+        width: 160rem/@base;
+        height: 160rem/@base;
+      }
+    }
+
+    // 右边描述
+    .mitem_right{
+      overflow: hidden;
+      height: 250rem/@base;
+      font-size: 25rem/@base;
+      padding:45rem/@base 25rem/@base;
+      position: relative;
+
+      .tit{
+        position: absolute;
+        top: 45rem/@base;
+        left: 0;
+        .price{
+          color:red;
+        }
+      }
+      .other{
+        position: absolute;
+        bottom: 45rem/@base;
+        left: 0;
+        width:100%;
+        color:#a1a1a1;
+        font-size: 26rem/@base;
+        .tips{
+          margin-right:25rem/@base;
+        }
+      }
+    }
+  }
+}
+
+.m_more{
+  height: 105rem/@base;
+  line-height:65rem/@base;
+  background-color:#f4f4f4;
+  padding:20rem/@base;
+ 
+  a{
+    display: block;
+    width:100%;
+    height: 65rem/@base;
+    border:1px solid #999;
+    border-radius: 2px;
+    font-size: 30rem/@base;
+    text-align: center;
+    border-radius: 4px;
+   
+  }
+}
+
+// 品牌排行
+// 1.品牌排行标题栏
+.mpp_tit{
+  height: 70rem/@base;
+  background-color: #ff9000;
+  padding:0 20rem/@base;
+  font-size: 30rem/@base;
+  line-height: 70rem/@base;
+  a{
+    
+    color:#fff;
+  }
+  img{
+    display: block;
+    width: 40rem/@base;
+    height: 40rem/@base;
+    margin-top:15rem/@base;
+  }
+}
+// 底部
+.mfooter{
+  // 底部导航
+  .mft_bts{
+    height: 70rem/@base;
+    margin-top:10rem/@base;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    
+  }
+  .mft_bts a{
+    display: block;
+    height: 70rem/@base;
+    float: left;
+    width: 30%;
+    text-align: center;
+    line-height:70rem/@base;
+    font-size: 24rem/@base;
+   
+  }
+  
+  .mft_bts a:nth-child(2){
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+  }
+  .mft_bts a:last-child{
+    img{
+      // display: block;
+      width: 34rem/@base;
+      height: 34rem/@base;
+      padding-bottom: 5rem/@base;
+    }
+  }
+// 底部信息
+  .mft_msg{
+    padding:30rem/@base 0;
+    p{
+      text-align: center;
+      font-size: 24rem/@base;
+      a{
+        display:inline-block;
+        // width: 100%;
+        font-size: 24rem/@base;
+      }
+    }
+  }
+}
+
+

@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>慢慢买-优惠券wl</title>
+  <title>慢慢买-商场导航wl</title>
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/coupon.css">
+  <link rel="stylesheet" href="css/sitenav.css">
 </head>
 
 <body>
@@ -16,24 +17,28 @@
     <!-- 头部 -->
     <header id="m_header">
       <div class="logo">
-        <a href="moneyctrl.html" title="慢慢买">
+        <a href="index.html" title="慢慢买">
           <img src="images/icback.svg" alt="">
         </a>
       </div>
-      <div class="mh_tit">优惠券</div>
+      <div class="mh_tit">国内折扣</div>
       <div class="appdown">
         <a href="javascript:;" title="手机APP下载">
           <img src="images/header_app.png" alt="手机APP下载">
         </a>
       </div>
     </header>
-    <!-- 中间内容区 -->
-    <div class="coupon">
-      <ul class="clearfix">
-       <!-- keng -->
+
+    <!-- 中间内容区域 -->
+    <div class="site_nav">
+      <div class="link clearfix">
        
-      </ul>
+      <!-- keng -->
+
+      </div>
     </div>
+
+
 
     <!-- 底部 -->
     <footer class="mfooter">
@@ -58,18 +63,16 @@
   </div>
 
 
-  <!-- 模板-内容信息的头部 -->
-  <script type="text/html" id="tpl">
-    {{each result v i}}
-    <li>
-        <a href="couponproduct.html?couponid={{v.couponId}}">
-          <!-- src v.couponImg -->
-          <img src="images/categorylist.jpg" alt="">
-          <span> {{v.couponTitle}}</span>
-        </a>
-      </li>
-      {{/each}}
-  </script>
+  <!-- 导航模板 -->
+  <script type="text/html" id="tpl1">
+   {{each result v i}}
+   <a href="{{v.navHref}}">
+      <img src="{{v.navImg}}" alt=""> {{v.navTitle}}
+    </a>
+   {{/each}}
+ </script>
+
+
 
 
   <script src="lib/flexible/flexible.js"></script>
@@ -77,7 +80,7 @@
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="js/common/Route.js"></script>
   <script src="js/common/Tools.js"></script>
-  <script src="js/coupon.js"></script>
+  <script src="js/sitenav.js"></script>
 </body>
 
 </html>

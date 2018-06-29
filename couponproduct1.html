@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买-优惠券详情wl</title>
-  <!-- <link rel="stylesheet" href="lib/mui/css/mui.min.css"> -->
+  <link rel="stylesheet" href="lib/mui/css/mui.min.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/couponproduct.css">
@@ -37,7 +37,7 @@
       <!-- 具体商品优惠信息 -->
       <div class="cpp_list">
         <ul>
-          <!-- keng1 -->
+          <!-- keng -->
         </ul>
       </div>
     </div>
@@ -64,24 +64,9 @@
   </div>
   <!-- 遮罩框 -->
   <div class="m_mask">
-    <!-- 图片-轮播图 -->
+    <!-- 显示图片轮播图 -->
     <div class="lbt">
-      <!-- 图片 -->
-      <div class="lbt_w">
-        <ul>
-          <!-- keng2 -->
-        </ul>
-
-      </div>
-      <!-- 左右箭头 -->
-      <div class="m_arrow">
-        <a class="left" href="javascript:;">&lt;</a>
-        <a class="right" href="javascript:;">&gt;</a>
-      </div>
-    </div>
-    <!-- 关闭按钮 -->
-    <div class="close">
-      <span class="fa fa-close"></span>
+     <!-- keng2 -->
     </div>
 
 
@@ -115,25 +100,52 @@
       {{/each}}
   </script>
   <script type="text/html" id="tpl2">
-      <!-- 假图片 -->  
-    <li>{{@ result[result.length-1].couponProductImg}}</li>
-    {{each result v i}}      
-        <li>
-            {{@ v.couponProductImg}}
-          <!-- <img src="images/couponproduct1.gif" alt=""> -->
-        </li>     
-    {{/each}}
-  <!-- 假图片 -->
-   <li>{{@ result[0].couponProductImg}} </li>
+    {{each result v i}}
+    <div class="mui-slider">
+        <div class="mui-slider-group mui-slider-loop">
+          <!--支持循环，需要重复图片节点-->
+          <div id="m_tp" class="mui-slider-item mui-slider-item-duplicate">
+            <a href="#">
+             if(i==0){
+              {{@ v.couponProductImg}}
+             }
+             <!-- <img src="images/couponproduct3.gif" /> -->
+            </a>
+          </div>
+          <!-- 中间循环的图片 -->
+          <div id="m_tp" class="mui-slider-item">
+            <a href="#">
+              <!-- <img src="images/couponproduct1.gif" /> -->
+              {{@ v.couponProductImg}}
+            </a>
+          </div>
+
+          <!--支持循环，需要重复图片节点-->
+          <div id="m_tp" class="mui-slider-item mui-slider-item-duplicate">
+            <a href="#">
+                if(i==result.length-1){
+                  {{@ v.couponProductImg}}
+                 }
+              <!-- <img src="images/couponproduct1.gif" /> -->
+            </a>
+          </div>
+        </div>
+      </div>
+      <!--左右箭头-->
+      <div class="m_arrow">
+        <a class="left" href="javascript:;">&lt;</a>
+        <a class="right" href="javascript:;">&gt;</a>
+      </div>
   
+  
+  {{/each}}
   </script>
 
 
   <script src="lib/flexible/flexible.js"></script>
   <script src="lib/artTemplate/template-web.js"></script>
   <script src="lib/jquery/jquery.min.js"></script>
-  <!-- <script src="lib/mui/js/mui.min.js"></script> -->
-  <script src="lib/animate/animate.js"></script>
+  <script src="lib/mui/js/mui.min.js"></script>
   <script src="js/common/Route.js"></script>
   <script src="js/common/Tools.js"></script>
   <script src="js/couponproduct.js"></script>

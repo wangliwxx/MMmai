@@ -1,0 +1,153 @@
+.product_list_title {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  padding-left: 0.26666667rem;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+}
+.product_list_title ul {
+  height: 0.8rem;
+  width: 100%;
+  overflow: hidden;
+}
+.product_list_title li {
+  float: left;
+  max-width: 40%;
+}
+.product_list_title li a {
+  display: block;
+  padding-right: 0.06666667rem;
+  font-size: 0.32rem;
+}
+.hot_p {
+  padding: 0.13333333rem 0.26666667rem;
+  color: #874604;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  margin-top: 0.10666667rem;
+  font-size: 0.32rem;
+}
+.mcategory {
+  margin-bottom: 0.4rem;
+}
+.mbrief-list-item .tit {
+  background-color: #eee;
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+}
+.mbrief-list-item .tit a {
+  display: block;
+  font-size: 0.32rem;
+  color: #000;
+  padding-left: 0.32rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+}
+.mbrief-list-item .tit a .top {
+  background-color: red;
+  height: 0.2rem;
+  text-align: center;
+}
+.mbrief-list-item .tit a span {
+  color: #000;
+}
+.mbrief-list-item .tit a .col {
+  color: #999;
+  font-size: 0.29333333rem;
+}
+.mbrief-list-item .tit i {
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  padding-right: 0.26666667rem;
+}
+.mpro_list li {
+  height: 3.33333333rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.mpro_list li .mitem_left {
+  width: 2.8rem;
+  height: 3.33333333rem;
+  padding: 0.6rem 0.33333333rem;
+}
+.mpro_list li .mitem_left img {
+  display: block;
+  width: 2.13333333rem;
+  height: 2.13333333rem;
+}
+.mpro_list li .mitem_right {
+  overflow: hidden;
+  height: 3.33333333rem;
+  font-size: 0.33333333rem;
+  padding: 0.6rem 0.33333333rem;
+  position: relative;
+}
+.mpro_list li .mitem_right .tit {
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+}
+.mpro_list li .mitem_right .tit .price {
+  color: red;
+}
+.mpro_list li .mitem_right .other {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  width: 100%;
+  color: #a1a1a1;
+  font-size: 0.34666667rem;
+}
+.mpro_list li .mitem_right .other .tips {
+  margin-right: 0.33333333rem;
+  color: darkorange;
+}
+.mpro_list .bra_conment {
+  border-bottom: 1px solid #ccc;
+  padding: 0.26666667rem;
+}
+.mpro_list .bra_conment .name {
+  font-size: 0.26666667rem;
+}
+.mpro_list .bra_conment .con {
+  padding: 0.26666667rem 0;
+  font-size: 0.37333333rem;
+  border-bottom: 1px solid #ccc;
+}
+.mpro_list a .mitem_left {
+  width: 2.8rem;
+  height: 3.33333333rem;
+  padding: 0.6rem 0.33333333rem;
+}
+.mpro_list a .mitem_left img {
+  display: block;
+  width: 2.13333333rem;
+  height: 2.13333333rem;
+}
+.mpro_list a .mitem_left .mitem_right {
+  overflow: hidden;
+  height: 3.33333333rem;
+  font-size: 0.33333333rem;
+  padding: 0.6rem 0.33333333rem;
+  position: relative;
+}
+.mpro_list a .mitem_left .mitem_right .tit {
+  position: absolute;
+  top: 0.6rem;
+  left: 0;
+}
+.mpro_list a .mitem_left .mitem_right .tit .price {
+  color: red;
+}
+.mpro_list a .mitem_left .mitem_right .other {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  width: 100%;
+  color: #a1a1a1;
+  font-size: 0.34666667rem;
+}
+.mpro_list a .mitem_left .mitem_right .other .tips {
+  margin-right: 0.33333333rem;
+  color: darkorange;
+}

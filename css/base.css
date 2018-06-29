@@ -5,6 +5,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+html,
+body {
+  height: 100%;
+}
 ol,
 ul {
   list-style: none;
@@ -105,7 +109,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 998;
   background-color: #ff841d;
 }
 #m_header .logo {

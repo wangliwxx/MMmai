@@ -1,0 +1,52 @@
+.product_list_title {
+  height: 0.8rem;
+  line-height: 0.8rem;
+  width: 100%;
+  padding-left: 0.26666667rem;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+}
+.product_list_title ul {
+  height: 0.8rem;
+  width: 100%;
+  overflow: hidden;
+}
+.product_list_title li {
+  float: left;
+  max-width: 40%;
+}
+.product_list_title li a {
+  display: block;
+  padding-right: 0.06666667rem;
+  font-size: 0.32rem;
+}
+.hot_p {
+  padding: 0.13333333rem 0.26666667rem;
+  color: #874604;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  margin: 0.10666667rem 0;
+  font-size: 0.32rem;
+}
+.mcategory {
+  margin-bottom: 0.4rem;
+}
+.mbrief-list-item .tit {
+  background-color: #eee;
+  width: 100%;
+  border-bottom: 1px solid #bbb;
+}
+.mbrief-list-item .tit a {
+  display: block;
+  font-size: 0.34666667rem;
+  color: #000;
+  font-weight: 700;
+  padding-left: 0.4rem;
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+}
+.mbrief-list-item .tit i {
+  height: 0.93333333rem;
+  line-height: 0.93333333rem;
+  padding-right: 0.26666667rem;
+}

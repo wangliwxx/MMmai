@@ -1,0 +1,166 @@
+@base:75;
+// 头部区域
+#m_header{
+ text-align: center;
+ color:#fff;
+  .logo{
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding:26rem/@base;
+    width:12%;
+
+    img{
+      display: block;
+      width: 100%;
+      margin-top: 6rem/@base;
+    }
+  }
+  .mh_tit{
+    height: 100rem/@base;
+    line-height: 100rem/@base;
+    font-size: 35rem/@base;
+  }  
+}
+// 中间内容区域
+.gs_content{
+  // 内容区域的头部
+.hd_title{
+  width: 100%;
+  height:70rem/@base;
+  // background-color: pink;
+  position: relative;
+  .filter{
+    width: 100%;
+   height:70rem/@base;
+   ul{
+     &.hdf{
+      height:70rem/@base; 
+      border-bottom: 1px solid #ccc;
+      li{
+        float: left;
+        width: 30%;
+        height: 100%;
+        border-left:1px solid #ccc;
+        line-height: 70rem/@base;
+        text-align: center;
+        &:first-child{
+          border-left: none;
+        }
+       a{
+         display: block;
+         width: 100%;
+         font-size: 28rem/@base;
+       }
+      }
+     } 
+   }
+ }
+
+
+ .search{
+   width:70rem/@base;
+   height:70rem/@base;
+   position: absolute;
+   top: 0;
+   right: 0;
+   text-align: center;
+   line-height: 70rem/@base;
+   border-left:1px solid #ccc;
+   span{
+    color:#999;
+   }
+ }
+
+  // 各种下拉框
+  .popbox{
+    position: absolute;
+    left: 0;
+    top:70rem/@base;
+    background-color: #fff;
+    width: 100%;
+    display: none;
+    &.now{
+      display: block;
+      z-index: 234;
+    }
+    ul{
+      li{
+        height:60rem/@base; 
+        border-bottom:1px solid #ccc;
+        line-height: 60rem/@base;
+        position: relative;
+        a{
+          display: block;
+          width: 100%;
+          padding-left:20rem/@base;
+        }
+        .m_icon{
+          position: absolute;
+          right: 35rem/@base;
+          top: 0;
+          color:transparent;
+        }
+      }
+    }
+  }
+}
+
+
+// 具体凑单商品展示
+.gs_pro_list{
+ width: 100%;
+ height: 100%;
+  ul{
+    li{
+      padding:20rem/@base;
+      float: left;
+      width: 50%;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee;
+      height: 500rem/@base;
+      // 图片
+      .dc_pic{
+        // width:300rem/@base;
+        // height:300rem/@base;
+        padding:20rem/@base;
+        img{
+          display: block;
+          width: 100%;
+          height:300rem/@base;
+        }
+      }
+      // 产品描述
+      .title{
+        font-size: 30rem/@base;
+       text-align: left;
+      }
+      // 价格折扣
+      .sub_price{
+        font-size: 24rem/@base;
+        color:red;
+        padding:20rem/@base 5rem/@base;
+        // text-align: right;
+        .cd_mall{
+          background-color: #ff9501;
+          color:#fff;
+          text-align: right;
+          padding:5rem/@base;
+          border-radius: 5rem/@base;
+          font-size: 20rem/@base;
+          margin-left:185rem/@base;
+        }
+      }
+     
+    }
+  }
+
+
+
+}
+
+
+
+
+}

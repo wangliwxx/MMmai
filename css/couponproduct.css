@@ -21,3 +21,130 @@
   line-height: 1.33333333rem;
   font-size: 0.46666667rem;
 }
+.cpp_tips {
+  font-size: 0.26666667rem;
+  padding: 0.2rem;
+  color: #999;
+  text-align: center;
+}
+.cpp_list li {
+  height: 3.33333333rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.cpp_list li .mitem_left {
+  width: 2.8rem;
+  height: 3.33333333rem;
+  padding: 0.6rem 0.33333333rem;
+}
+.cpp_list li .mitem_left img {
+  display: block;
+  width: 2.13333333rem;
+  height: 2.13333333rem;
+}
+.cpp_list li .mitem_right {
+  overflow: hidden;
+  height: 3.33333333rem;
+  font-size: 0.33333333rem;
+  padding: 0.26666667rem;
+  position: relative;
+}
+.cpp_list li .mitem_right .tit {
+  position: absolute;
+  top: 0.6rem;
+  color: #333;
+  left: 0;
+  padding-right: 0.4rem;
+}
+.cpp_list li .mitem_right .price {
+  color: #000;
+  position: absolute;
+  top: 1.6rem;
+  left: 0;
+  font-size: 0.37333333rem;
+  font-weight: 700;
+}
+.cpp_list li .mitem_right .other {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 0;
+  width: 100%;
+  color: red;
+  font-size: 0.29333333rem;
+}
+.cpp_list li .mitem_right .m_icon {
+  font-size: 0.66666667rem;
+  font-weight: 400;
+  position: absolute;
+  top: 1.6rem;
+  right: 0.13333333rem;
+}
+.m_mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.m_mask .lbt {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  transform: translatey(-50%);
+  width: 4.13333333rem;
+  height: 2.21333333rem;
+  padding: 0 0.66666667rem;
+}
+.m_mask .lbt .lbt_w {
+  width: 2.66666667rem;
+  height: 2.21333333rem;
+  position: relative;
+  overflow: hidden;
+}
+.m_mask .lbt ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.m_mask .lbt ul li {
+  float: left;
+  padding: 0rem;
+  width: 2.66666667rem;
+  height: 2.21333333rem;
+}
+.m_mask .lbt ul li img {
+  display: block;
+  width: 100%;
+}
+.m_mask .m_arrow .left,
+.m_mask .m_arrow .right {
+  width: 0.4rem;
+  height: 0.8rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  margin-top: -0.4rem;
+  text-decoration: none;
+  text-align: center;
+  line-height: 0.8rem;
+  font-size: 0.4rem;
+  font-family: "宋体";
+  color: #fff;
+}
+.m_mask .m_arrow .left:hover,
+.m_mask .m_arrow .right:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.m_mask .m_arrow .left {
+  left: 0.26666667rem;
+}
+.m_mask .m_arrow .right {
+  right: 0.37333333rem;
+}
+.m_mask .close {
+  position: absolute;
+  top: 0.06666667rem;
+  right: 0.06666667rem;
+}

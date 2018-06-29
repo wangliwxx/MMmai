@@ -24,3 +24,218 @@
     font-size: 35rem/@base;
   }  
 }
+
+// 中间内容区
+.cpp_yh{
+
+}
+// 提示
+.cpp_tips{
+  font-size: 20rem/@base;
+  padding:15rem/@base;
+ color:#999;
+ text-align: center;
+
+}
+// 具体商品信息
+.cpp_list{
+
+  li{
+    height: 250rem/@base;
+    border-bottom: 1px solid #e6e6e6;
+    // 左边图片
+    .mitem_left{
+      width: 210rem/@base;
+      height: 250rem/@base;
+      padding:45rem/@base 25rem/@base;
+      img{
+        display: block;
+        width: 160rem/@base;
+        height: 160rem/@base;
+      }
+    }
+
+    // 右边描述
+    .mitem_right{
+      overflow: hidden;
+      height: 250rem/@base;
+      font-size: 25rem/@base;
+      padding:20rem/@base;
+      position: relative;
+
+      .tit{
+        position: absolute;
+        top: 45rem/@base;
+        color:#333;
+        left: 0;
+        padding-right:30rem/@base;
+       
+      }
+      .price{
+        color:#000;
+        position: absolute;
+        top:120rem/@base;
+        left: 0;
+        font-size: 28rem/@base;
+        font-weight: 700;
+      }
+      .other{
+        position: absolute;
+        bottom: 45rem/@base;
+        left: 0;
+        width:100%;
+        color:red;
+        font-size: 22rem/@base;
+      
+      }
+      .m_icon{
+        font-size: 50rem/@base;
+        font-weight: 400;
+        position: absolute;
+        top:120rem/@base;
+        right:10rem/@base;
+
+      }
+    }
+  }
+}
+// 遮罩框
+.m_mask{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+
+  // .lbt{
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 32%;
+  //   // transform: translateX(-50%);
+  //   transform: translatey(-50%);
+  //   width: 310rem/@base;
+  //   height: 166rem/@base;
+  //   padding:0 50rem/@base; 
+  // }
+  // .mui-slider{
+  //   width: 201rem/@base;
+  //   height: 166rem/@base;
+  //   overflow: hidden;
+  //   #m_tp{
+  //     img{
+  //       display: block;
+  //       width: 201rem/@base;
+  //       height: 166rem/@base;
+  //     }
+  //   }  
+  // }
+
+  // // 左右箭头
+  // .m_arrow{
+  //   .left,
+  //   .right {
+  //     width: 30rem/@base;
+  //     height: 60rem/@base;
+  //     background-color: rgba(0, 0, 0, .3);
+  //     position: absolute;
+  //     top: 50%;
+  //     margin-top: -30rem/@base;
+  //     text-decoration: none;
+  //     text-align: center;
+  //     line-height: 60rem/@base;
+  //     font-size: 30rem/@base;
+  //     font-family: "宋体";
+  //     color: #fff;
+  //   }
+
+  //   .left:hover,
+  //   .right:hover {
+  //     background-color: rgba(0, 0, 0, .6);
+  //   }
+
+  //   .left {
+  //     left: 20rem/@base;
+  //   }
+
+  //   .right {
+  //     right: 28rem/@base;
+  //   }
+  
+  // }
+
+  // 自己原生写的JS生成的轮播图
+  .lbt{
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    // transform: translateX(-50%);
+    transform: translatey(-50%);
+    width: 310rem/@base;
+    height: 166rem/@base;
+    padding:0 50rem/@base; 
+    
+    .lbt_w{
+      width: 200rem/@base;
+      height: 166rem/@base;
+      position: relative;
+      overflow: hidden;
+    }
+    ul{
+      position: absolute;
+      top: 0;
+      left: 0;
+      li{
+        float: left;
+        padding: 0rem/@base;
+        width: 200rem/@base;
+        height: 166rem/@base;
+        img{
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+  
+  // // 左右箭头
+  .m_arrow{
+    .left,
+    .right {
+      width: 30rem/@base;
+      height: 60rem/@base;
+      background-color: rgba(0, 0, 0, .3);
+      position: absolute;
+      top: 50%;
+      margin-top: -30rem/@base;
+      text-decoration: none;
+      text-align: center;
+      line-height: 60rem/@base;
+      font-size: 30rem/@base;
+      font-family: "宋体";
+      color: #fff;
+    }
+
+    .left:hover,
+    .right:hover {
+      background-color: rgba(0, 0, 0, .6);
+    }
+
+    .left {
+      left: 20rem/@base;
+    }
+
+    .right {
+      right: 28rem/@base;
+    }
+ 
+  }
+  .close{
+    position: absolute;
+    top: 5rem/@base;
+    right:5rem/@base;
+  }
+}

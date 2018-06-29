@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-品牌详情wl</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/brand.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="m_header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="images/header_logo.png" alt="">
+        </a>
+      </div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 搜索框 -->
+    <section id="m_form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </form>
+    </section>
+    <!-- 面包屑 -->
+    <nav class="product_list_title">
+      <ul class="clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+        </li>
+        <li>
+          <a href="category.html">全部分类 ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 热门品牌排行 -->
+    <div class="bra_list">
+      <!--平板电视哪个牌子好  -->
+      <div class="hot_p">
+        平板电视哪个牌子好
+      </div>
+      <div class="mcategory mbrief">
+        <ul class="mbrief-list clearfix">
+          <!-- keng 1-->
+
+        </ul>
+      </div>
+      <!-- 平板电视产品销量排行 -->
+      <div class="hot_p">
+        平板电视产品销量排行
+      </div>
+      <div class="mpro_list">
+        <ul class=" clearfix">
+          <!-- keng2 -->
+
+        </ul>
+      </div>
+    </div>
+    <!-- 平板电视最新评价 -->
+    <div class="hot_p">
+      平板电视最新评价
+    </div>
+    <div class="mpro_list">
+      <ul class=" clearfix">
+
+      </ul>
+
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- 底部 -->
+  <footer class="mfooter">
+    <!-- 底部导航 -->
+    <div class="mft_bts clearfix">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;">
+        <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+      </a>
+    </div>
+    <!-- 底部信息 -->
+    <div class="mft_msg">
+      <p>
+        <a href="javascript:;" style="color:red">手机APP下载</a>
+        <a href="javascript:;" style="color:black">慢慢买手机版</a>
+        <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+  </div>
+
+
+  <!-- 平板电视哪个牌子好 -->
+  <script type="text/html" id="tpl1">
+    <!-- 1. -->
+    {{each result v i}}
+    <li class="mbrief-list-item" >
+        <div class="tit clearfix" data-id="{{v.titleId}}">
+          <a href="productlist.html?categoryid={{v.categoryId}}" class="fl">
+            <i class="top" style="background-color:blue">{{i+1}}</i>
+            <span>{{v.brandName}}</span>
+            <span class="col">{{v.brandInfo}}</span>
+          </a>
+          <i class="fr fa fa-angle-right"></i>
+        </div>
+
+      </li>
+     
+      {{/each}}
+ </script>
+  <!-- 平板电视产品销量排行 -->
+  <script type="text/html" id="tpl2">
+  <!-- 1. -->
+  {{each result v i}}
+  <li>
+      <!--点击跳到对应的页面 -->
+      <a href="product.html?productid={{v.productId}}&categoryId={{v.categoryId}}">
+        <div class="mitem_left fl">
+          <!-- v.productImg2 -->
+          {{@ v.productImg}}
+          <!-- <img src="images/product.jpg" alt=""> -->
+        </div>
+        <div class="mitem_right">
+          <p class="tit txt-cut">
+            {{v.productName}}
+            <span class="price">{{v.productPrice}}</span>
+          </p>
+          <p class="other clearfix">
+            <span class="fl"> {{v.productQuote}} / {{v.productCom}}</span>
+            <span class="fr tips">
+              <!-- ?????????????? -->
+              <i class="star5">☆☆☆☆☆</i>
+            
+            </span>
+          </p>
+        </div>
+      </a>
+    </li>
+   
+    {{/each}}
+</script>
+  <!-- 平板电视最新评价 -->
+  <script type="text/html" id="tpl3">
+    <!-- 1. -->
+    {{each result v i}}
+    <li>
+        <!-- 名字 -->
+        <div class="name clearfix">
+          <div class="fl">
+            <span>{{v.comName}}：</span>
+            <span>☆☆☆☆☆</span>
+          </div>
+          <span class="fr">{{v.comTime}}</span>
+        </div>
+        <!-- 内容 -->
+        <div class="con">
+          {{v.comContent}}
+
+        </div>
+
+        <!-- 评价 -->
+        <div class="bra_conment">
+          <!-- keng3-2-->
+
+
+        </div>
+      </li>
+   
+     
+      {{/each}}
+  </script>
+
+
+
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/brand.js"></script>
+</body>
+
+</html>

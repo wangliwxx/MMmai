@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>慢慢买-优惠券wl</title>
+  <title>慢慢买-品牌标题wl</title>
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/coupon.css">
+  <link rel="stylesheet" href="css/brandTitle.css">
 </head>
 
 <body>
@@ -16,25 +17,45 @@
     <!-- 头部 -->
     <header id="m_header">
       <div class="logo">
-        <a href="moneyctrl.html" title="慢慢买">
-          <img src="images/icback.svg" alt="">
+        <a href="index.html" title="慢慢买">
+          <img src="images/header_logo.png" alt="">
         </a>
       </div>
-      <div class="mh_tit">优惠券</div>
       <div class="appdown">
         <a href="javascript:;" title="手机APP下载">
           <img src="images/header_app.png" alt="手机APP下载">
         </a>
       </div>
     </header>
-    <!-- 中间内容区 -->
-    <div class="coupon">
+    <!-- 搜索框 -->
+    <section id="m_form_search">
+      <form action="#" class="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <input type="button" value="搜索">
+      </form>
+    </section>
+    <!-- 面包屑 -->
+    <nav class="product_list_title">
       <ul class="clearfix">
+        <li>
+          <a href="index.html">首页 ></a>
+        </li>
+        <li>
+          <a href="category.html">全部分类 ></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 热门品牌排行 -->
+    <div class="hot_p">
+      热门品牌排行
+    </div>
+    <!-- 商品列表 -->
+    <div class="mcategory mbrief">
+      <ul class="mbrief-list clearfix">
        <!-- keng -->
-       
+
       </ul>
     </div>
-
     <!-- 底部 -->
     <footer class="mfooter">
       <!-- 底部导航 -->
@@ -58,18 +79,26 @@
   </div>
 
 
-  <!-- 模板-内容信息的头部 -->
-  <script type="text/html" id="tpl">
+  <!-- 导航模板 -->
+  <script type="text/html" id="tpl1">
+    <!-- 1. -->
     {{each result v i}}
-    <li>
-        <a href="couponproduct.html?couponid={{v.couponId}}">
-          <!-- src v.couponImg -->
-          <img src="images/categorylist.jpg" alt="">
-          <span> {{v.couponTitle}}</span>
-        </a>
+    <li class="mbrief-list-item" data-brandTitleId="{{v.brandTitleId}}" data-categoryId="{{v.categoryId}}">
+        <!-- 标题 -->
+        <div class="tit clearfix" data-id="{{v.titleId}}">
+          <a href="brand.html?brandtitleid={{v.brandTitleId}}" class="fl">
+            {{v.brandTitle}}
+          </a>
+          <i class="fr fa fa-angle-down"></i>
+        </div>
+
       </li>
+     
       {{/each}}
-  </script>
+ </script>
+
+
+
 
 
   <script src="lib/flexible/flexible.js"></script>
@@ -77,7 +106,7 @@
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="js/common/Route.js"></script>
   <script src="js/common/Tools.js"></script>
-  <script src="js/coupon.js"></script>
+  <script src="js/brandTitle.js"></script>
 </body>
 
 </html>

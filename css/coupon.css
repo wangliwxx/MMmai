@@ -33,6 +33,7 @@
   border: 1px solid #ccc;
   margin-top: 0.13333333rem;
   margin-left: 0.13333333rem;
+  position: relative;
 }
 .coupon li a {
   font-size: 0.26666667rem;
@@ -44,4 +45,9 @@
   height: 1.33333333rem;
   margin: 0 auto;
   margin-top: 0.06666667rem;
+}
+.coupon li a span {
+  position: absolute;
+  bottom: 0.26666667rem;
+  left: 1.06666667rem;
 }

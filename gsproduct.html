@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买-凑单品页wl</title>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header id="m_header">
+      <div class="logo">
+        <a href="index.html" title="慢慢买">
+          <img src="images/icback.svg" alt="">
+        </a>
+      </div>
+      <div class="mh_tit">凑单品</div>
+      <div class="appdown">
+        <a href="javascript:;" title="手机APP下载">
+          <img src="images/header_app.png" alt="手机APP下载">
+        </a>
+      </div>
+    </header>
+    <!-- 中间内容区 -->
+    <div class="gs_content">
+      <!-- 内容区域的头部 -->
+      <div class="hd_title">
+        <!-- 导航 -->
+        <div class="filter">
+          <ul class="clearfix hdf">
+            <li class="ch_shop">
+              <a href="javascript:;">
+                京东
+                <i class="fa fa-angle-up"></i>
+              </a>
+            </li>
+            <li class="ch_area">
+              <a href="javascript:;">
+                华北
+                <i class="fa fa-angle-up"></i>
+              </a>
+            </li>
+            <li class="allprice">
+              <a href="javascript:;">
+                全部价格
+                <i class="fa fa-angle-up"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- 搜索 -->
+        <div class="search">
+          <span class="fa fa-search"></span>
+        </div>
+        <!-- 各种搜索 -->
+        <div class="popbox" id="area1">
+          <ul>
+            <!-- keng1 -->
+          </ul>
+        </div>
+        <div class="popbox" id="area2">
+          <ul>
+            <!-- keng2 -->
+          </ul>
+        </div>
+        <div class="popbox" id="area3">
+          <ul>
+            <li>
+              <a href="javascript:;">全部价格</a>
+              <span class="m_icon">√</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- 具体凑单商品展示 -->
+      <div class="gs_pro_list">
+        <ul class="clearfix">
+          <!-- keng 3-->
+        </ul>
+      </div>
+
+    </div>
+    <!-- 底部 -->
+    <footer class="mfooter">
+      <!-- 底部导航 -->
+      <div class="mft_bts clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="javascript:;">
+          <img src="images/top.jpg" alt="返回顶部"> 返回顶部
+        </a>
+      </div>
+      <!-- 底部信息 -->
+      <div class="mft_msg">
+        <p>
+          <a href="javascript:;" style="color:red">手机APP下载</a>
+          <a href="javascript:;" style="color:black">慢慢买手机版</a>
+          <a href="javascript:;" style="color:#999">--掌上比价平台</a>
+        </p>
+        <p>m.manmanbuy.com</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- 模板-内容信息的头部 -->
+  <script type="text/html" id="tpl1">
+    {{each result v i}}
+      <li  data-shopid="{{v.shopId}}">
+        <a href="javascript:;">{{v.shopName}}</a>
+        <span class="m_icon">√</span>
+      </li> 
+    {{/each}}
+  </script>
+  <script type="text/html" id="tpl2">
+    {{each result v i}}
+      <li data-areaid="{{v.areaId}}">
+        <a href="javascript:;" >{{v.areaName}}</a>
+        <span class="m_icon">√</span>
+      </li> 
+    {{/each}}
+  </script>
+  <script type="text/html" id="tpl3">
+    {{each result v i}}
+    <li>
+        <!-- a后面还要拼接productid -->
+        <a href="discount.html?productid={{v.productId}}">
+          <div class="dc_pic">
+            <!-- v.productImg  替换整个img标签 -->
+            <img src="{{v.productImg}}" alt="">
+          </div>
+          <p class="title txt-cut">{{v.productName}}</p>
+          <p class="sub_price">{{v.productPrice}}
+            <span class="cd_mall">去凑单</span>
+          </p>
+        </a>
+      </li>
+    {{/each}}
+  
+  </script>
+
+
+  <script src="lib/flexible/flexible.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/gsproduct.js"></script>
+</body>
+
+</html>

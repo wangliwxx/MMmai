@@ -31,78 +31,23 @@
     <!-- 中间内容区 -->
     <div class="coupon">
       <!-- 区域滑动 -->
-      <div class="mui-scroll-wrapper bcj_head">
-        <div class="mui-scroll">
-          <ul class="clearfix">
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-            <li>
-              <!-- a后面拼接titleid -->
-              <a href="baicaijia.html">全部</a>
-            </li>
-          </ul>
-        </div>
+      <div class="bcj_title">
+        <ul class="clearfix">
+          <!-- keng1 -->
+        </ul>
+      </div>
+      <!-- 搜索 -->
+      <div class="bcj_search">
+        <span class="fa fa-search"></span>
       </div>
       <!-- 对应商品展示区 -->
-      <div class="bcj_list"></div>
+      <div class="bcj_list">
+        <ul class="clearfix">
+          <!-- keng2 -->
+
+
+        </ul>
+      </div>
     </div>
 
     <!-- 底部 -->
@@ -130,7 +75,46 @@
 
   <!-- 模板-内容信息的头部 -->
   <script type="text/html" id="tpl1">
-   
+    {{each result v i}}
+    <li data-titleid={{v.titleId}} class="{{i==1?'now':''}}">
+      <a href="javascript:;" class="{{i==1?'current':''}}">{{v.title}}</a>
+    </li>
+  {{/each}}
+  </script>
+  <!-- 模板-根据标题渲染内容信息 -->
+  <script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li>
+      <!-- 链接
+       @ v.productHref-->
+       <!-- 左图片 -->
+        <div class="bcj_left">
+          {{@ v.productImg}}
+        </div>
+        <!-- 右信息 -->
+        <div class="bcj_right">
+          <p class="bcj_info">
+            {{@ v.productName}}
+          </p>
+          <p class="bcj_price">
+            {{@ v.productPrice}}
+          </p>
+          <div class="bcj_progress">
+              {{@ v.productCouponRemain}}
+          </div>
+           
+          
+          <p class="bcj_link">
+              {{@ v.productCoupon}}
+          </p>
+          <div class="btn_link">
+                     下单链接
+          </div>
+           
+        </div>
+      
+    </li>
+    {{/each}}
   </script>
 
 
@@ -140,6 +124,7 @@
   <script src="lib/mui/js/mui.min.js"></script>
   <script src="js/common/Route.js"></script>
   <script src="js/common/Tools.js"></script>
+  <script src="lib/iscroll/iscroll.js"></script>
   <script src="js/baicaijia.js"></script>
 </body>
 

@@ -12,10 +12,10 @@ $(function(){
     $(".mpro_list ul").html(template("tpl2", info))
   })
   // 平板电视最新评价
-  Route.getproductcom(0,function (info) {
-    console.log(info);
-    $(".bra_conment").html(template("tpl3", info))
-  })
+  // Route.getproductcom(0,function (info) {
+  //   console.log(info);
+  //   $(".bra_conment").html(template("tpl3", info))
+  // })
 
 
 

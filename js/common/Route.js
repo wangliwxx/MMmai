@@ -3,11 +3,11 @@
  */
 
 /* 接口地址管理 Route，ajax请求封装，请求基于 jquery */
-(function(window) {
+(function (window) {
 
     var Route = {
         /* 提出 URL 以备 提取接口 可以集中管理 */
-        baseUrl : 'http://127.0.0.1:9090',
+        baseUrl: 'http://127.0.0.1:9090',
 
         /* ------ 首页 api 数据请求 ------ */
         // 获取首页上面的菜单栏数据
@@ -39,7 +39,7 @@
         // 根据页数用来获取省钱控的每一页的商品列表, 不传参默认获取第一页
         getmoneyctrl: getmoneyctrl,
         // 根据商品id获取省钱控商品的详细信息
-        getmoneyctrlproduct : getmoneyctrlproduct,
+        getmoneyctrlproduct: getmoneyctrlproduct,
 
 
         /* ------- 国内折扣商品详情页 --------- */
@@ -92,7 +92,7 @@
 
 
     /* 可扩展功能 */
-    Route.extend = function(obj) {
+    Route.extend = function (obj) {
         for (var k in obj) {
             // 一般还会进行一个判断 if obj.hasOwnProperty( k )
             // 这里只是简单的 工具类，先简单来写
@@ -117,8 +117,8 @@
      */
     function getindexmenu(callback) {
         var url = Route.baseUrl + '/api/getindexmenu';
-        $.get( url, function( res ) {
-            callback && callback( res );
+        $.get(url, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -146,17 +146,17 @@
     function getmoneyctrl() {
         var pageid;
         var callback;
-        if ( arguments.length === 1 ) {
+        if (arguments.length === 1) {
             pageid = 0;
-            callback = arguments[ 0 ];
+            callback = arguments[0];
         } else {
-            pageid = arguments[ 0 ];
-            callback = arguments[ 1 ];
+            pageid = arguments[0];
+            callback = arguments[1];
         }
 
         var url = Route.baseUrl + '/api/getmoneyctrl';
-        $.get( url, { pageid : pageid }, function( res ) {
-            callback && callback( res );
+        $.get(url, { pageid: pageid }, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -174,10 +174,10 @@
                      }]
                  }
      * */
-    function getcategorytitle( callback ) {
+    function getcategorytitle(callback) {
         var url = Route.baseUrl + '/api/getcategorytitle';
-        $.get( url, function( res ) {
-            callback && callback( res );
+        $.get(url, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -199,10 +199,10 @@
                  }]
              }
      * */
-    function getcategory( titleid, callback ) {
+    function getcategory(titleid, callback) {
         var url = Route.baseUrl + '/api/getcategory';
-        $.get( url, { titleid: titleid }, function( res ) {
-            callback && callback( res );
+        $.get(url, { titleid: titleid }, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -220,10 +220,10 @@
                  }]
              }
      * */
-    function getcategorybyid( categoryid, callback ) {
+    function getcategorybyid(categoryid, callback) {
         var url = Route.baseUrl + '/api/getcategorybyid';
-        $.get( url, { categoryid: categoryid }, function( res ) {
-            callback && callback( res );
+        $.get(url, { categoryid: categoryid }, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -250,14 +250,14 @@
                  }]
             }
      * */
-    function getproductlist( categoryid, pageid, callback ) {
+    function getproductlist(categoryid, pageid, callback) {
         var url = Route.baseUrl + '/api/getproductlist';
         var data = {
-            categoryid : categoryid ? categoryid : 0,
+            categoryid: categoryid ? categoryid : 0,
             pageid: pageid ? pageid : 1
         }
-        $.get( url, data, function( res ) {
-            callback && callback( res );
+        $.get(url, data, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -280,10 +280,10 @@
                  }]
              }
     * */
-    function getproduct( productid, callback ) {
+    function getproduct(productid, callback) {
         var url = Route.baseUrl + '/api/getproduct';
-        $.get( url, { productid: productid }, function( res ) {
-            callback && callback( res );
+        $.get(url, { productid: productid }, function (res) {
+            callback && callback(res);
         }, "json")
     }
 
@@ -305,11 +305,11 @@
                  }]
              }
      * */
-    function getproductcom( productid, callback ) {
+    function getproductcom(productid, callback) {
         var url = Route.baseUrl + '/api/getproductcom';
-        $.get( url, { productid : productid }, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, { productid: productid }, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
     /**
@@ -339,11 +339,11 @@
              }]
         }
      * */
-    function getmoneyctrlproduct( productid, callback ) {
+    function getmoneyctrlproduct(productid, callback) {
         var url = Route.baseUrl + '/api/getmoneyctrlproduct';
-        $.get( url, { productid : productid }, function( res ) {
-            callback && callback( res );
-        }, "json" );
+        $.get(url, { productid: productid }, function (res) {
+            callback && callback(res);
+        }, "json");
     }
 
 
@@ -365,10 +365,10 @@
             }]
         }
      * */
-    function getinlanddiscount( callback ) {
+    function getinlanddiscount(callback) {
         var url = Route.baseUrl + '/api/getinlanddiscount';
-        $.get( url, function( res ) {
-            callback && callback( res );
+        $.get(url, function (res) {
+            callback && callback(res);
         });
     }
 
@@ -399,11 +399,11 @@
             }]
         }
      **/
-    function getdiscountproduct( productid, callback ) {
+    function getdiscountproduct(productid, callback) {
         var url = Route.baseUrl + '/api/getdiscountproduct';
-        $.get( url, { productid: productid }, function( res ) {
-            callback && callback( res );
-        }, "json" );
+        $.get(url, { productid: productid }, function (res) {
+            callback && callback(res);
+        }, "json");
     }
 
 
@@ -422,10 +422,10 @@
             }]
         }
      **/
-    function getbaicaijiatitle( callback ) {
+    function getbaicaijiatitle(callback) {
         var url = Route.baseUrl + '/api/getbaicaijiatitle';
-        $.get( url, function( res ) {
-            callback && callback( res );
+        $.get(url, function (res) {
+            callback && callback(res);
         })
     }
 
@@ -448,11 +448,11 @@
                 }]
             }
      **/
-    function getbaicaijiaproduct( titleid, callback ) {
+    function getbaicaijiaproduct(titleid, callback) {
         var url = Route.baseUrl + "/api/getbaicaijiaproduct";
-        $.get( url, { titleid : titleid }, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, { titleid: titleid }, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
 
@@ -473,11 +473,11 @@
             }]
         }
      **/
-    function getcoupon( callback ) {
+    function getcoupon(callback) {
         var url = Route.baseUrl + '/api/getcoupon';
-        $.get( url, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
     /**
@@ -497,11 +497,11 @@
                 }]
             }
      **/
-    function getcouponproduct( couponid, callback ) {
+    function getcouponproduct(couponid, callback) {
         var url = Route.baseUrl + '/api/getcouponproduct';
-        $.get( url, { couponid: couponid }, function( res ) {
-            callback && callback( res );
-        }, "json" );
+        $.get(url, { couponid: couponid }, function (res) {
+            callback && callback(res);
+        }, "json");
     }
 
 
@@ -520,11 +520,11 @@
             }]
         }
      **/
-    function getgsshop( callback ) {
+    function getgsshop(callback) {
         var url = Route.baseUrl + '/api/getgsshop';
-        $.get( url, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
     /**
@@ -540,11 +540,11 @@
                 }]
             }
      **/
-    function getgsshoparea( callback ) {
+    function getgsshoparea(callback) {
         var url = Route.baseUrl + '/api/getgsshoparea';
-        $.get( url, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
     /**
@@ -565,14 +565,14 @@
             }]
         }
      **/
-    function getgsproduct( shopid, areaid, callback ) {
+    function getgsproduct(shopid, areaid, callback) {
         var url = Route.baseUrl + '/api/getgsproduct';
         var data = {
             shopid: shopid,
             areaid: areaid
         };
-        $.get( url, data, function( res ) {
-            callback && callback( res );
+        $.get(url, data, function (res) {
+            callback && callback(res);
         }, 'json');
     }
 
@@ -593,11 +593,11 @@
                 }]
             }
      **/
-    function getsitenav( callback ) {
+    function getsitenav(callback) {
         var url = Route.baseUrl + '/api/getsitenav';
-        $.get( url, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
 
@@ -616,11 +616,11 @@
                 }]
             }
      **/
-    function getbrandtitle( callback ) {
+    function getbrandtitle(callback) {
         var url = Route.baseUrl + '/api/getbrandtitle';
-        $.get( url, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
 
     /**
@@ -639,11 +639,11 @@
                 }]
             }
      **/
-    function getbrand( brandtitleid, callback ) {
+    function getbrand(brandtitleid, callback) {
         var url = Route.baseUrl + '/api/getbrand';
-        $.get(url, { brandtitleid : brandtitleid }, function( res ) {
-            callback && callback( res );
-        }, 'json' )
+        $.get(url, { brandtitleid: brandtitleid }, function (res) {
+            callback && callback(res);
+        }, 'json')
     }
 
 
@@ -673,16 +673,21 @@
                 }]
             }
      **/
-    function getbrandproductlist( brandtitleid, pagesize, callback ) {
+    function getbrandproductlist(brandtitleid, pagesize, callback) {
         var url = Route.baseUrl + '/api/getbrandproductlist';
         var data = {
-            brandtitleid : brandtitleid,
-            pagesize : pagesize
+            brandtitleid: brandtitleid,
+            pagesize: pagesize
         };
-        $.get( url, data, function( res ) {
-            callback && callback( res );
-        }, 'json' );
+        $.get(url, data, function (res) {
+            callback && callback(res);
+        }, 'json');
     }
+    //返回顶部功能
+    $(".mft_bts a:last-child").on("click", function () {
+        $("html,body").animate({ scrollTop: 0 }, 1000);
+    })
+
 
 
 

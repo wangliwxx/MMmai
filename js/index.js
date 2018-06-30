@@ -25,9 +25,9 @@ $(function(){
  });
  //返回顶部功能
  $(".mft_bts a:last-child").on("click",function(){
-   $("html,body").animate({scrollTop:0},1000);
- })
- 
+  $("html,body").animate({scrollTop:0},1000);
+})
+
 
 
 

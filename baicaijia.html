@@ -49,6 +49,10 @@
         </ul>
       </div>
     </div>
+    <!-- 返回顶部 -->
+    <div class="gotop">
+      <span class="fa fa-angle-up"></span>
+    </div>
 
     <!-- 底部 -->
     <footer class="mfooter">
@@ -93,23 +97,24 @@
         </div>
         <!-- 右信息 -->
         <div class="bcj_right">
-          <p class="bcj_info">
+          <div class="bcj_info">
             {{@ v.productName}}
-          </p>
-          <p class="bcj_price">
+          </div>
+          <div class="bcj_price">
             {{@ v.productPrice}}
-          </p>
+          </div>
           <div class="bcj_progress">
               {{@ v.productCouponRemain}}
           </div>
            
           
-          <p class="bcj_link">
+          <div class="bcj_link">
               {{@ v.productCoupon}}
-          </p>
-          <div class="btn_link">
-                     下单链接
+              <div class="btn_link">
+                  {{@ v.productHref}}
+              </div>
           </div>
+         
            
         </div>
       

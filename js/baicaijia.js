@@ -2,7 +2,7 @@ $(function () {
 
 
 
-
+var scroll;
 
 
   // 功能一：内容区域-头部导航信息
@@ -24,7 +24,7 @@ $(function () {
 
 
     //2.传的是父元素的选择器
-    new IScroll(".bcj_title", {
+    scroll= new IScroll(".bcj_title", {
       scrollY: false,//禁用垂直滚动
       scrollX: true//启动水平滚动
     });
@@ -39,14 +39,23 @@ $(function () {
       // console.log( $(this).find("a"))
       $(this).find("a").addClass("current").end().siblings().find("a").removeClass("current");
 
-
+      scroll.scrollToElement(this, 200, false)
       // 根据标题id获取该标题对应的商品列表然后渲染到页面
       render(titleid)
+      
 
 
     })
 
   })
+
+  // 点击返回顶部
+  
+  
+ $(".gotop").on("click",function(){
+  $("html,body").animate({scrollTop:0},1000);
+})
+
 
 
   //---------   获取对应商品详情信息---------------------

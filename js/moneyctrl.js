@@ -1,6 +1,6 @@
 $(function () {
   //发送ajax获取数据-获取商品信息
-  render(1);
+  render(0);
   //上一页
   $(".m_prev").on("click", function () {
     var tep = $("#mfenye_select").val() - 1;
@@ -41,8 +41,8 @@ $(function () {
       var total = Math.ceil(info.totalCount / info.pagesize);
       // console.log(total);
       var html = "";
-      for (var i = 1; i <= total; i++) {
-        html += "<option value='" + i + "'>" + i + "/" + total + "</option>";
+      for (var i = 0; i <= total; i++) {
+        html += "<option value='" + i + "'>" + (i+1) + "/" + total + "</option>";
       }
       $("#mfenye_select").html(html);
       $('#mfenye_select').val(page);

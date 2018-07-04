@@ -10,12 +10,18 @@ $(function(){
   Route.getbrandproductlist(brandtitleid,4,function (info) {
     console.log(info);
     $(".mpro_list ul").html(template("tpl2", info))
+
+    // // 设置序号图标颜色
+    // $(".mbrief-list-item .top:first-child").css('backgroundColor','green')
   })
   // 平板电视最新评价
   // Route.getproductcom(0,function (info) {
   //   console.log(info);
   //   $(".bra_conment").html(template("tpl3", info))
   // })
+
+  // 设置
+
 
 
 

@@ -39,6 +39,24 @@
   margin-bottom: 30rem/@base;
 }
 .mbrief-list-item{
+  .top{
+    //  display: inline-block;
+    background-color: #ccc;
+    // width:10rem/@base ;
+    // height:15rem/@base;
+    // width:15rem/@base;
+    padding: 10rem/@base;
+    // text-align: center;
+   }
+  &:first-child .top{
+    background-color: red;
+  }
+  &:nth-child(2) .top{
+    background-color: green;
+  }
+  &:nth-child(3) .top{
+    background-color: pink;
+  }
   
   .tit{
     background-color: #eee;
@@ -54,14 +72,7 @@
       padding-left:24rem/@base;
      height: 70rem/@base;
      line-height: 70rem/@base;
-     .top{
-      //  display: inline-block;
-      background-color: red;
-      // width:10rem/@base ;
-      height:15rem/@base;
-      // padding: 0;
-      text-align: center;
-     }
+     
      span{
        color:#000;
      }
@@ -70,6 +81,7 @@
       font-size: 22rem/@base;
     }
     }
+   
     i{
       height: 70rem/@base;;
       line-height: 70rem/@base;

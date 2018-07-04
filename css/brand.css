@@ -31,6 +31,19 @@
 .mcategory {
   margin-bottom: 0.4rem;
 }
+.mbrief-list-item .top {
+  background-color: #ccc;
+  padding: 0.13333333rem;
+}
+.mbrief-list-item:first-child .top {
+  background-color: red;
+}
+.mbrief-list-item:nth-child(2) .top {
+  background-color: green;
+}
+.mbrief-list-item:nth-child(3) .top {
+  background-color: pink;
+}
 .mbrief-list-item .tit {
   background-color: #eee;
   width: 100%;
@@ -43,11 +56,6 @@
   padding-left: 0.32rem;
   height: 0.93333333rem;
   line-height: 0.93333333rem;
-}
-.mbrief-list-item .tit a .top {
-  background-color: red;
-  height: 0.2rem;
-  text-align: center;
 }
 .mbrief-list-item .tit a span {
   color: #000;

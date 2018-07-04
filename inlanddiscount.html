@@ -59,6 +59,9 @@
     </footer>
   </div>
 
+  <!-- loading -->
+  
+
 
   <!-- 模板-内容信息的头部 -->
   <script type="text/html" id="tpl">
@@ -68,7 +71,8 @@
         <a href="discount.html?productid={{v.productId}}">
           <div class="dc_pic">
             <!-- v.productImg  替换整个img标签 -->
-            <img src="images/mnav.jpg" alt="">
+            <!-- <img src="images/mnav.jpg" alt=""> -->
+            {{@ v.productImg}}
           </div>
           <p class="title txt-cut">{{v.productName}}</p>
           <p class="sub_price">{{v.productPrice}}</p>
